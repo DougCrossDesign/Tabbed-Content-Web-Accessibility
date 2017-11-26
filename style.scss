@@ -1,0 +1,104 @@
+/*Example Reset*/
+#example-wrapper{
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Tab Styles */
+$tab-button-bgcolor: rgba(255,255,255,1);
+$tab-button-txtcolor: rgba(0,0,0,1);
+$tab-button-border-width: 1px 0px 0px 1px;
+$tab-button-last-border-width: 1px 1px 0px 1px;
+$tab-button-border-style: solid;
+$tab-button-border-color: rgba(0,0,0,1);
+$tab-button-padding: 1em;
+$tab-button-font-family: 'Helvetica', Arial, sans-serif;
+$tab-button-font-size: 1em;
+
+/*Tab Content Style*/
+$tab-content-font-family: 'Helvetica', Arial, sans-serif;
+$tab-content-border-width: 1px;
+$tab-content-border-style: solid;
+$tab-content-border-color: rgba(0,0,0,1);
+
+/*Content Div Styles*/
+$tab-content-font-family: 'Helvetica', Arial, sans-serif;
+$tab-content-font-size: 1em;
+
+.tabbed-content {
+  
+  ul, .tabs-list{
+    margin: 0;
+    padding: 0;
+    
+    li{
+      /*Base*/
+      text-align: center;
+      display: inline;
+      float: left;
+      padding: 1em;
+      margin: 0;
+      
+      /*Vars*/
+      border-width: $tab-button-border-width;
+      border-style: $tab-button-border-style;
+      border-color: $tab-button-border-color;
+      
+      &.current{
+        
+      }
+      
+      &.last{
+        border-width: $tab-button-last-border-width;
+      }
+      
+      a, .tab{
+        
+        /* Base */
+        display: inline-block;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        text-decoration: none;
+        
+        /* Vars */
+        background-color: $tab-button-bgcolor;
+        color: $tab-button-txtcolor;
+        font-family: $tab-button-font-family;
+        font-size: 1em;
+        
+        &.selected{
+          
+        }
+        
+      }
+      
+    }
+    
+  }
+  
+  .tab-panel{
+    display: none;
+  
+    &.current {
+      /*Base*/
+      clear: both;
+      display: block;
+      padding: 1em;
+      text-decoration: none;
+      
+      /*Vars*/
+      border-width: $tab-content-border-width;
+      border-style: $tab-content-border-style;
+      border-color: $tab-content-border-color;
+      background-color: $tab-button-bgcolor;
+      color: $tab-button-txtcolor;
+      font-family: $tab-content-font-family;
+      font-size: 1em;
+      
+    }
+    
+  }
+  
+}
